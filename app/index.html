@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>smpl.io</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- JS/CSS
+  ================================================== -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,400italic,600italic' rel='stylesheet' type='text/css'>
+	<script src="js/scripts.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="sixteen columns">
+			<h1 class="tighten">smpl</h1>
+			<p>A "smpl" automated starter framework for sass lovers.</p>
+			<span class="bold">Includes:</span>
+			<ul>
+				<li>Flexible <a rel="external" href="http://getskeleton.com/" title="Skeleton">skeleton</a> grid system mixin</li>
+				<li>Human readable css helpers</li>
+				<li>Quick deployment based on <a href="http://getfireshell.com/" rel="external">fireshell</a></li>
+			</ul>
+			<h2>Columns</h2>
+			<p>In addition to the <span class="c"><code>.one.column</code></span> through <span class="c"><code>.sixteen.columns</code></span> classes included with <a href="http://getskeleton.com/" rel="external">Skeleton</a>, there are several nestable responsive fractional columns:</p>
+			<ul>
+				<li>.one_half</li>
+				<li>.one_third</li>
+				<li>.two_thirds</li>
+				<li>.three_fourths</li>
+				<li>.one_fourth</li>
+				<li>.one_fifth</li>
+				<li>.two_fifth</li>
+				<li>.three_fifth</li>
+				<li>.four_fifth</li>
+				<li>.one_sixth</li>
+				<li>.five_sixth</li>
+			</ul>
+		<div class="dim rnd one_half">.one_half</div>
+		<div class="dim rnd one_half last">.one_half.last</div>
+		<div class="clearfix"></div>
+		<div class="dim rnd one_third">.one_third</div>
+		<div class="dim rnd one_third">.one_third</div>
+		<div class="dim rnd one_third last">.one_third.last</div>
+		<div class="clearfix"></div>
+		<div class="dim rnd one_third">.one_third</div>
+		<div class="dim rnd two_thirds last">.two_thirds.last</div>
+		<div class="clearfix"></div>
+		<div class="dim rnd three_fourths">.three_fourths</div>
+		<div class="dim rnd one_fourth last">.one_fourth.last</div>
+		<div class="clearfix"></div>
+		<div class="dim rnd one_fourth">.one_fourth</div>
+		<div class="dim rnd one_fourth">.one_fourth</div>
+		<div class="dim rnd one_fourth">.one_fourth</div>
+		<div class="dim rnd one_fourth last">.one_fourth.last</div>
+		<div class="clearfix"></div>
+		<div class="dim rnd two_fifth">.two_fifth</div>
+		<div class="dim rnd three_fifth last">.three_fifth.last</div>
+		<div class="clearfix"></div>
+		<div class="dim rnd one_fifth">.one_fifth</div>
+		<div class="dim rnd four_fifth last">.four_fifth. last</div>
+		<div class="clearfix"></div>
+		<div class="dim rnd one_sixth">.one_sixth</div>
+		<div class="dim rnd five_sixth last">.five_sixth</div>
+		<div class="clearfix"></div>
+			<h2>Buttons</h2>
+			<a class="tiny button" href="#">.tiny.button</a>
+			<a class="small button" href="#">.small.button</a>
+			<a class="button" href="#">.button</a>
+			<a class="big red button" href="#">.big.button</a>
+			<a class="huge black button" href="#">.huge.button</a>
+			<span class="bold clearfix">Available Default Colors</span>
+			<a class="green button" href="#">.green.button</a>
+			<a class="red button" href="#">.red.button</a>
+			<a class="blue button" href="#">.blue.button</a>
+			<a class="gray button" href="#">.gray.button</a>
+			<a class="black button" href="#">.black.button</a>
+			<span class="bold clearfix">You can also use captions:</span>
+			<a class="button" href="#">.button <span class="caption">span.caption</span></a>
+
+		<h2>Images</h2>
+		<p>Force images to fit full container width: <span class="c">img.scale-with-grid</span></p>
+		<img src="http://placehold.it/350x150/EEE/CCC&text=placeholder" class="scale-with-grid"/>
+		<p>Add a border accent to an image: <span class="c">img.feature</span></p>
+		<img src="http://placehold.it/350x150/EEE/CCC&text=placeholder" class="scale-with-grid feature"/>
+		<p>Add a rounded corner (to any element): <span class="c">img.rnd</span></p>
+		<img src="http://placehold.it/350x150/EEE/CCC&text=placeholder" class="scale-with-grid rnd"/>
+		<h2>Typography Helpers</h2>
+		<h4 class="bordered">H.bordered</h4>
+		<div class="one_half">
+			<h4 class="light">H.light</h4>
+			<h4 class="lighter">H.lighter</h4>
+			<h4 class="bold">H.bold</h4>
+			<h4 class="bolder">H.bolder</h4>
+		</div>
+		<div class="one_half last">
+			<span class="bdr marginv10"><h4 class="remove-top">H.remove-top</h4></span>
+			<span class="bdr marginv10"><h4 class="remove-bottom">H.remove-bottom</h4></span>
+			<span class="subheading">
+				<p>Wrap a set of headings in a <span class="c">.subheading</span> container to butt up two headings. You could also use the <span class="c">.remove-top-bottom</span> class on each heading as an alternative.</p>
+				<h2>Heading</h2>
+				<h3>with subheading</h3>
+			</span>
+		</div>
+		<div class="clearfix"></div>
+		<hr />
+		<span class="c">.lowercase</span>
+		<p class="remove-top lowercase">This is lowercase text.</p>
+		<span class="c">.uppercase</span>
+		<p class="remove-top uppercase">This is uppercase text.</p>
+		<a href="#" class="underline">.underline link</a>
+		<br />
+		<a href="#" class="nounderline">.nounderline link</a>
+	<h2>Floats</h2>
+		<img src="http://placehold.it/350x150/EEE/CCC&text=.floatleft" class="floatleft scale-with-grid"/>
+		<img src="http://placehold.it/350x150/EEE/CCC&text=.floatright" class="floatright scale-with-grid"/>
+		<div class="clear"></div>
+
+		<h2>Misc. Styles</h2>
+
+		<div class="one_half">
+		<p class="remove-top">Add margin to an element.</p>
+			<ul class="none">
+				<li>.margin5</li>
+				<li>.margin10</li>
+				<li>.margin20</li>
+				<li>.margin30</li>
+				<li>.margin40</li>
+			</ul>
+			<p class="remove-bottom">Add vertical margin to an element.</p>
+			<ul class="none">
+				<li>.marginv5</li>
+				<li>.marginv10</li>
+				<li>.marginv20</li>
+				<li>.marginv30</li>
+				<li>.marginv40</li>
+			</ul>
+		</div>
+		<div class="one_half last">
+			<p class="remove-top">Add padding to an element.</p>
+			<ul class="none">
+				<li>.pad5</li>
+				<li>.pad10</li>
+				<li>.pad20</li>
+				<li>.pad30</li>
+				<li>.pad40</li>
+			</ul>
+			<p class="remove-bottom">Add vertical padding to an element.</p>
+			<ul class="none">
+				<li>.padv5</li>
+				<li>.padv10</li>
+				<li>.padv20</li>
+				<li>.padv30</li>
+				<li>.padv40</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<p class="remove-bottom">As shown above, <span class="c">ul.none</span> or <span class="c">ol.none</span> Remove list styles from a UL or OL.</p>
+		<p><span class="smalltext">This is small text</span> <span class="c">.smalltext</span></p>
+		<p class="alignleft"><span class="c">.alignleft</span> aligns text left. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		<p class="alignright"><span class="c">.alignright</span> aligns text right. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		<p class="aligncenter"><span class="c">.aligncenter</span>  aligns text center. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+	</div>
+
+	</div> <!-- /container -->
+</body>
+</html>

@@ -1,0 +1,348 @@
+$gutter: 20px;
+$columns: 16;
+
+@mixin generate_layout($width: 960px, $offset: true, $onecol: false) {
+  $column_width: $width / $columns;
+  .container {
+    position: relative;
+    width: $width;
+    margin: 0 auto;
+    padding: 0;
+  }
+  @if $onecol == true {
+    @include mobile_columns($width);
+  }
+  @else {
+    @include columns($column_width, $gutter, $width);
+  }
+  .column,.columns {
+    float: left;
+    display: inline;
+    margin-left: $gutter / 2;
+    margin-right: $gutter / 2;
+    &.alpha {
+      margin-left: 0;
+    }
+    &.omega {
+      margin-right: 0;
+    }
+  }
+
+  @if $offset == true {
+    @if $onecol == true {
+      @include mobile_offset;
+    }
+    @else {
+      @include offset($column_width, $width);
+    }
+  }
+}
+
+@mixin columns($column_width, $gutter, $width) {
+  $one_third_column: $width / 3;
+  .one.column,
+  .one.columns {
+    width: $column_width * 1 - $gutter;
+  }
+  .two.columns {
+    width: $column_width * 2 - $gutter;
+  }
+  .three.columns {
+    width: $column_width * 3 - $gutter;
+  }
+  .four.columns {
+    width: $column_width * 4 - $gutter;
+  }
+  .five.columns {
+    width: $column_width * 5 - $gutter;
+  }
+  .six.columns {
+    width: $column_width * 6 - $gutter;
+  }
+  .seven.columns {
+    width: $column_width * 7 - $gutter;
+  }
+  .eight.columns {
+    width: $column_width * 8 - $gutter;
+  }
+  .nine.columns {
+    width: $column_width * 9 - $gutter;
+  }
+  .ten.columns {
+    width: $column_width * 10 - $gutter;
+  }
+  .eleven.columns {
+    width: $column_width * 11 - $gutter;
+  }
+  .twelve.columns {
+    width: $column_width * 12 - $gutter;
+  }
+  .thirteen.columns {
+    width: $column_width * 13 - $gutter;
+  }
+  .fourteen.columns {
+    width: $column_width * 14 - $gutter;
+  }
+  .fifteen.columns {
+    width: $column_width * 15 - $gutter;
+  }
+  .sixteen.columns {
+    width: $column_width * 16 - $gutter;
+  }
+  .one-third.column {
+    width: $one_third_column - $gutter;
+  }
+  .two-thirds.column {
+    width: $width - $one_third_column - $gutter;
+  }
+  .one-third.column.alpha,
+  .one-third.column.omega {
+    width: $one_third_column - $gutter / 2;
+  }
+  .two-thirds.column.alpha,
+  .two-thirds.column.omega {
+    width: $width - $one_third_column - $gutter / 2;
+  }
+
+}
+
+@mixin offset($column_width, $width) {
+  .offset-by-half {
+    padding-left: ($width - $column_width * 15) / 2;
+  }
+  .offset1,.offset-by-one {
+    padding-left: $width - $column_width * 15;
+  }
+  .offset2,.offset-by-two {
+    padding-left: $width - $column_width * 14;
+  }
+  .offset3,.offset-by-three {
+    padding-left: $width - $column_width * 13;
+  }
+  .offset4,.offset-by-four {
+    padding-left: $width - $column_width * 12;
+  }
+  .offset5,.offset-by-five {
+    padding-left: $width - $column_width * 11;
+  }
+  .offset6,.offset-by-six {
+    padding-left: $width - $column_width * 10;
+  }
+  .offset7,.offset-by-seven {
+    padding-left: $width - $column_width * 9;
+  }
+  .offset8,.offset-by-eight {
+    padding-left: $width - $column_width * 8;
+  }
+  .offset9,.offset-by-nine {
+    padding-left: $width - $column_width * 7;
+  }
+  .offset10,.offset-by-ten {
+    padding-left: $width - $column_width * 6;
+  }
+  .offset11,.offset-by-eleven {
+    padding-left: $width - $column_width * 5;
+  }
+  .offset12,.offset-by-twelve {
+    padding-left: $width - $column_width * 4;
+  }
+  .offset13,.offset-by-thirteen {
+    padding-left: $width - $column_width * 3;
+  }
+  .offset14,.offset-by-fourteen {
+    padding-left: $width - $column_width * 2;
+  }
+  .offset15,.offset-by-fifteen {
+    padding-left: $width - $column_width * 1;
+  }
+}
+
+@mixin mobile_columns($width) {
+  .one.column,
+  .one.columns,
+  .two.columns,
+  .three.columns,
+  .four.columns,
+  .five.columns,
+  .six.columns,
+  .seven.columns,
+  .eight.columns,
+  .nine.columns,
+  .ten.columns,
+  .eleven.columns,
+  .twelve.columns,
+  .thirteen.columns,
+  .fourteen.columns,
+  .fifteen.columns,
+  .sixteen.columns,
+  .one-third.column,
+  .two-thirds.column,
+  .col,
+  .one-third.column.alpha,
+  .one-third.column.omega,
+  .two-thirds.column.alpha,
+  .two-thirds.column.omega {
+    width: $width - $gutter;
+  }
+  .one_half,
+  .one_third,
+  .two_thirds,
+  .three_fourths,
+  .one_fourth,
+  .one_fifth,
+  .two_fifth,
+  .three_fifth,
+  .four_fifth,
+  .one_sixth,
+  .five_sixth {width: 100% !important;}
+}
+
+@mixin mobile_offset {
+  .container .offset-by-one,.container .offset1,
+  .container .offset-by-two,.container .offset2,
+  .container .offset-by-three,.container .offset3,
+  .container .offset-by-four,.container .offset4,
+  .container .offset-by-five,.container .offset5,
+  .container .offset-by-six,.container .offset6,
+  .container .offset-by-seven,.container .offset7,
+  .container .offset-by-eight,.container .offset8,
+  .container .offset-by-nine,.container .offset9,
+  .container .offset-by-ten,.container .offset10,
+  .container .offset-by-eleven,.container .offset11,
+  .container .offset-by-twelve,.container .offset12,
+  .container .offset-by-thirteen,.container .offset13,
+  .container .offset-by-fourteen,.container .offset14,
+  .container .offset-by-fifteen,.container .offset15 {
+    padding-left: 0;
+  }
+}
+
+// End Grids
+
+// allows the text color to be customized
+$color: hsl(0, 0, 100%) !default;
+
+
+
+@mixin skeleton-linear-gradient($start-gradient, $stop-gradient) {
+    background: $stop-gradient;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-gradient), color-stop(100%,$stop-gradient));
+    background: -webkit-linear-gradient(top, $start-gradient 0%,$stop-gradient 100%);
+    background: -o-linear-gradient(top, $start-gradient 0%,$stop-gradient 100%);
+    background: -ms-linear-gradient(top, $start-gradient 0%,$stop-gradient 100%);
+    background: linear-gradient(top bottom, $start-gradient 0%,$stop-gradient 100%);
+    background-clip: border-box;
+    -pie-background: linear-gradient(top, $start-gradient, $stop-gradient);
+    behavior: $pie-behavior;
+    position: relative;
+}
+
+// Gradient Buttons (not currently used)
+
+@mixin simple-button ($base-hue, $base-saturation, $base-lightness, $color) {
+
+  $start-gradient: tint(hsl($base-hue, $base-saturation, $base-lightness), 10%);
+  $stop-gradient: shade(hsl($base-hue, $base-saturation, $base-lightness), 15%);
+  $border: shade(hsl($base-hue, $base-saturation, $base-lightness), 10%);
+
+  $inset-shadow: tint(hsl($base-hue, $base-saturation, $base-lightness), 20%);
+  $text-shadow: shade(hsl($base-hue, $base-saturation, $base-lightness), 30%);
+
+  $text-shadow-h-offset: 0;
+  $text-shadow-v-offset: -1px;
+  $text-shadow-blur: 0;
+
+
+  // for light buttons
+  @if $base-lightness > 70% {
+    // lighten the text shadow and offset light direction
+    $border: darken(hsl($base-hue, $base-saturation, $base-lightness), 10%);
+    $inset-shadow: lighten(hsl($base-hue, $base-saturation, $base-lightness), 20%);
+    $text-shadow: lighten(hsl($base-hue, $base-saturation, $base-lightness), 10%);
+    $start-gradient: lighten(hsl($base-hue, $base-saturation, $base-lightness), 10%);
+    $stop-gradient: darken(hsl($base-hue, $base-saturation, $base-lightness), 10%);
+    $text-shadow-v-offset: 1px;
+  }
+
+
+  color: $color !important;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: .32em 1.25em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration:none;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid $border;
+  @include single-text-shadow($text-shadow-h-offset, $text-shadow-v-offset, $text-shadow-blur, $color: $text-shadow);
+  @include border-radius (4px);
+  @include box-shadow (inset 0 1px 0 0 $inset-shadow,0 1px 1px 0 #fff);
+  @include skeleton-linear-gradient($start-gradient, $stop-gradient);
+  background-repeat: repeat-x;
+  &:hover {
+    $border: scale-saturation(darken(hsl($base-hue, $base-saturation, $base-lightness), 5%), 15%);
+    $inset-shadow: scale-saturation(lighten(hsl($base-hue, $base-saturation, $base-lightness), 5%), -7%);
+    $start-gradient: scale-saturation(hsl($base-hue, $base-saturation, $base-lightness), 30%);
+    $stop-gradient: scale-saturation(hsl($base-hue, $base-saturation, $base-lightness), 30%);
+    // for light buttons
+    @if $base-saturation < 20% {
+      $start-gradient: lighten(hsl($base-hue, $base-saturation, $base-lightness), 10%);
+      $stop-gradient: darken(hsl($base-hue, $base-saturation, $base-lightness), 15%);
+      $border: desaturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 5%), 20%);
+    }
+    @if $base-lightness > 70% {
+      $text-shadow-v-offset: 1px;
+    }
+    border: 1px solid $border;
+    @include skeleton-linear-gradient($start-gradient, $stop-gradient);
+    @include box-shadow (inset 0 1px 0 0 $inset-shadow);
+    cursor: pointer;
+  }
+
+  &:active {
+    $border: saturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 14%), 9%);
+    $inset-shadow: saturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 17%), 7%);
+
+    @if $base-saturation < 11% {
+    $inset-shadow: desaturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 17%), 7%);
+    $border: desaturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 24%), 9%);
+    }
+
+
+    @include box-shadow (
+    inset 0 2px 6px 0 $inset-shadow,
+    inset 0 0 0 0 $inset-shadow,
+    0 1px 1px 0 #eee
+    );
+    border: 1px solid $border;
+  }
+}
+
+
+// Use REM in modern browsers and fallback to pixels for IE8-
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+//
+// $sizeValue - The desired font-size in pixels.
+//
+// Compatible in IE6+.
+@mixin font-size( $sizeValue: 1.6 ) {
+  font-size: ($sizeValue * 1) + px !important;
+  font-size: ($sizeValue / 10 * 0.625) + rem !important;
+}
+
+
+// Use REM in modern browsers and fallback to pixels for IE8-
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+//
+// $sizeValue - The desired font-size in pixels.
+//
+// Compatible in IE6+.
+@mixin line-height( $sizeValue: 1.6 ) {
+  line-height: ($sizeValue * 1) + px;
+  line-height: ($sizeValue / 10 * 0.625) + rem;
+}
+
+@mixin nolist {margin: 0;padding: 0;list-style: none;}
+

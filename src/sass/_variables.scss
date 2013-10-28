@@ -1,0 +1,53 @@
+
+// Brand Colors
+$brand: #137DBF;
+$brand-alt: #6CC655;
+$accent: #ECECEC;
+
+// The base font size.
+$base-font-size: 16px; // Override default set in Compass' Vertical Rhythm partial.
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 28px; // Override default set in Compass' Vertical Rhythm partial.
+
+// Default font family.
+$base-font-family: 'Source Sans Pro', Sans-Serif, Arial, sans-serif;
+
+// Heading font family
+$heading-font-family: 'Source Sans Pro', Sans-Serif, Arial, sans-serif;
+
+// Links
+$link-color: saturate(lighten($brand,5%),10%);
+$link-hover-color: $brand-alt;
+
+// Heading Fonts
+$h1-color: #111;
+$h2-color: #222;
+$h3-color: #333;
+$h4-color: #444;
+$h5-color: #555;
+$h6-color: #666;
+
+$h1-font-size: 2.5714 * $base-font-size !default;
+$h2-font-size: 2.1429 * $base-font-size !default;
+$h3-font-size: 1.7143 * $base-font-size !default;
+$h4-font-size: 1.2857 * $base-font-size !default;
+$h5-font-size: 1.1429 * $base-font-size !default;
+$h6-font-size: 1.1429 * $base-font-size !default;
+
+$font-normal:	400 !default;
+$font-light:	300 !default;
+$font-lighter:	200 !default;
+$font-bold:		600 !default;
+$font-bolder:	900 !default;
+
+
+// Set this to true to add support for IE 6.
+// $legacy-support-for-ie6: true; // Override default set in Compass' Support partial.
+
+// Set this to true to add support for IE 7.
+$legacy-support-for-ie7: true; // Override default set in Compass' Support partial.
+
+// The amount lists and blockquotes are indented.
+$indent-amount: 40px !default;
+
+$pie-behavior: url("../robo/css/PIE.php");
