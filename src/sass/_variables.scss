@@ -10,10 +10,10 @@ $base-font-size: 16px; // Override default set in Compass' Vertical Rhythm parti
 $base-line-height: 28px; // Override default set in Compass' Vertical Rhythm partial.
 
 // Default font family.
-$base-font-family: 'Source Sans Pro', Sans-Serif, Arial, sans-serif;
+$base-font-family: 'Open Sans', Sans-Serif, Arial, sans-serif;
 
 // Heading font family
-$heading-font-family: 'Source Sans Pro', Sans-Serif, Arial, sans-serif;
+$heading-font-family: 'Open Sans', Sans-Serif, Arial, sans-serif;
 
 // Links
 $link-color: saturate(lighten($brand,5%),10%);
@@ -36,9 +36,9 @@ $h6-font-size: 1.1429 * $base-font-size !default;
 
 $font-normal:	400 !default;
 $font-light:	300 !default;
-$font-lighter:	200 !default;
+$font-lighter:	300 !default;
 $font-bold:		600 !default;
-$font-bolder:	900 !default;
+$font-bolder:	800 !default;
 
 
 // Set this to true to add support for IE 6.

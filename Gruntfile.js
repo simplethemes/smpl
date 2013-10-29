@@ -117,9 +117,9 @@ module.exports = function (grunt) {
      * Imports all .js files and appends project banner
      */
     concat: {
-      dist: {
+      dev: {
         files: {
-          '<%= project.app %>/js/scripts.min.js': ['<%= project.src %>/js/jquery.fixto.js','<%= project.src %>/js/jquery.hoverIntent.js','<%= project.src %>/js/jquery.superfish.js','<%= project.src %>/js/main.js']
+          '<%= project.app %>/js/scripts.min.js': ['<%= project.src %>/js/jquery.fixto.js','<%= project.src %>/js/jquery.hoverIntent.js','<%= project.src %>/js/jquery.superfish.js','<%= project.src %>/js/app.js']
         }
       },
       options: {
@@ -143,9 +143,10 @@ module.exports = function (grunt) {
         mangle: true
         //compress: true
       },
-      dist: {
+      dev: {
         files: {
-          '<%= project.app %>/js/scripts.min.js' : ['<%= project.src %>/js/app.js']
+          //'<%= project.app %>/js/scripts.min.js': ['<%= project.src %>/js/jquery.fixto.js','<%= project.src %>/js/jquery.hoverIntent.js','<%= project.src %>/js/jquery.superfish.js','<%= project.src %>/js/app.js']
+          '<%= project.app %>/js/scripts.min.js': ['<%= project.src %>/js/app.js','<%= project.src %>/js/jquery.formalize.js']
         }
       }
     },
@@ -167,7 +168,7 @@ module.exports = function (grunt) {
       },
       dev: {
         options: {
-          outputStyle: 'compressed'
+          outputStyle: 'expanded'
         }
       },
       dist: {
@@ -232,7 +233,7 @@ module.exports = function (grunt) {
     'compass:dev',
     'connect:livereload',
     'open:dev',
-    'uglify',
+    'concat:dev',
     'watch'
   ]);
 

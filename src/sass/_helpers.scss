@@ -12,6 +12,7 @@ img.pull-right {margin: 0px 0px 0px 10px;}
 .alignleft {text-align: left !important;}
 .alignright {text-align: right !important;}
 .aligncenter {text-align: center !important;}
+.blockcenter {margin:0 auto;width: 100%;text-align: center;display: inline-block;}
 
 ul.none, ul.none li,
 ol.none, ol.none li {
@@ -148,5 +149,5 @@ a.hoverblack {
   .four_fifth,
   .one_sixth,
   .five_sixth {width: 100% !important;}
-  #content a.btn,#content a.btn.rr,#content a.btn.lr,.button {width: 100% !important; @include border-radius(4px);}
+  input[type="reset"],input[type="submit"],input[type="button"],a.button,a.button.rr,a.button.lr,.button,button {width: 100% !important; @include border-radius(4px);}
 }

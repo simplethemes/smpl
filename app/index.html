@@ -4,182 +4,400 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Basic Page Needs
+  <!-- Basic Page Needs
   ================================================== -->
-	<meta charset="utf-8">
-	<title>smpl.io</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <meta charset="utf-8">
+  <title>smpl.io</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-	<!-- Mobile Specific Metas
+  <!-- Mobile Specific Metas
   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- JS/CSS
+  <!-- JS/CSS
   ================================================== -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-	<link rel="stylesheet" href="css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,400italic,600italic' rel='stylesheet' type='text/css'>
-	<script src="js/scripts.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <script src="js/scripts.min.js"></script>
 
 </head>
 <body>
-	<div class="container">
-		<div class="sixteen columns">
-			<h1 class="tighten">smpl</h1>
-			<p>A "smpl" automated starter framework for sass lovers.</p>
-			<span class="bold">Includes:</span>
-			<ul>
-				<li>Flexible <a rel="external" href="http://getskeleton.com/" title="Skeleton">skeleton</a> grid system mixin</li>
-				<li>Human readable css helpers</li>
-				<li>Quick deployment based on <a href="http://getfireshell.com/" rel="external">fireshell</a></li>
-			</ul>
-			<h2>Columns</h2>
-			<p>In addition to the <span class="c"><code>.one.column</code></span> through <span class="c"><code>.sixteen.columns</code></span> classes included with <a href="http://getskeleton.com/" rel="external">Skeleton</a>, there are several nestable responsive fractional columns:</p>
-			<ul>
-				<li>.one_half</li>
-				<li>.one_third</li>
-				<li>.two_thirds</li>
-				<li>.three_fourths</li>
-				<li>.one_fourth</li>
-				<li>.one_fifth</li>
-				<li>.two_fifth</li>
-				<li>.three_fifth</li>
-				<li>.four_fifth</li>
-				<li>.one_sixth</li>
-				<li>.five_sixth</li>
-			</ul>
-		<div class="dim rnd one_half">.one_half</div>
-		<div class="dim rnd one_half last">.one_half.last</div>
-		<div class="clearfix"></div>
-		<div class="dim rnd one_third">.one_third</div>
-		<div class="dim rnd one_third">.one_third</div>
-		<div class="dim rnd one_third last">.one_third.last</div>
-		<div class="clearfix"></div>
-		<div class="dim rnd one_third">.one_third</div>
-		<div class="dim rnd two_thirds last">.two_thirds.last</div>
-		<div class="clearfix"></div>
-		<div class="dim rnd three_fourths">.three_fourths</div>
-		<div class="dim rnd one_fourth last">.one_fourth.last</div>
-		<div class="clearfix"></div>
-		<div class="dim rnd one_fourth">.one_fourth</div>
-		<div class="dim rnd one_fourth">.one_fourth</div>
-		<div class="dim rnd one_fourth">.one_fourth</div>
-		<div class="dim rnd one_fourth last">.one_fourth.last</div>
-		<div class="clearfix"></div>
-		<div class="dim rnd two_fifth">.two_fifth</div>
-		<div class="dim rnd three_fifth last">.three_fifth.last</div>
-		<div class="clearfix"></div>
-		<div class="dim rnd one_fifth">.one_fifth</div>
-		<div class="dim rnd four_fifth last">.four_fifth. last</div>
-		<div class="clearfix"></div>
-		<div class="dim rnd one_sixth">.one_sixth</div>
-		<div class="dim rnd five_sixth last">.five_sixth</div>
-		<div class="clearfix"></div>
-			<h2>Buttons</h2>
-			<a class="tiny button" href="#">.tiny.button</a>
-			<a class="small button" href="#">.small.button</a>
-			<a class="button" href="#">.button</a>
-			<a class="big red button" href="#">.big.button</a>
-			<a class="huge black button" href="#">.huge.button</a>
-			<span class="bold clearfix">Available Default Colors</span>
-			<a class="green button" href="#">.green.button</a>
-			<a class="red button" href="#">.red.button</a>
-			<a class="blue button" href="#">.blue.button</a>
-			<a class="gray button" href="#">.gray.button</a>
-			<a class="black button" href="#">.black.button</a>
-			<span class="bold clearfix">You can also use captions:</span>
-			<a class="button" href="#">.button <span class="caption">span.caption</span></a>
+  <div class="container">
+    <div class="sixteen columns">
+      <h1 class="tighten">smpl</h1>
+      <p>"smpl" is an automated starter framework for sass lovers who like to design in the browser. I created this repo to help me get started with new projects. It includes some very basic UI elements and some helper classes I tend to use in every project.</p>
 
-		<h2>Images</h2>
-		<p>Force images to fit full container width: <span class="c">img.scale-with-grid</span></p>
-		<img src="http://placehold.it/350x150/EEE/CCC&text=placeholder" class="scale-with-grid"/>
-		<p>Add a border accent to an image: <span class="c">img.feature</span></p>
-		<img src="http://placehold.it/350x150/EEE/CCC&text=placeholder" class="scale-with-grid feature"/>
-		<p>Add a rounded corner (to any element): <span class="c">img.rnd</span></p>
-		<img src="http://placehold.it/350x150/EEE/CCC&text=placeholder" class="scale-with-grid rnd"/>
-		<h2>Typography Helpers</h2>
-		<h4 class="bordered">H.bordered</h4>
-		<div class="one_half">
-			<h4 class="light">H.light</h4>
-			<h4 class="lighter">H.lighter</h4>
-			<h4 class="bold">H.bold</h4>
-			<h4 class="bolder">H.bolder</h4>
-		</div>
-		<div class="one_half last">
-			<span class="bdr marginv10"><h4 class="remove-top">H.remove-top</h4></span>
-			<span class="bdr marginv10"><h4 class="remove-bottom">H.remove-bottom</h4></span>
-			<span class="subheading">
-				<p>Wrap a set of headings in a <span class="c">.subheading</span> container to butt up two headings. You could also use the <span class="c">.remove-top-bottom</span> class on each heading as an alternative.</p>
-				<h2>Heading</h2>
-				<h3>with subheading</h3>
-			</span>
-		</div>
-		<div class="clearfix"></div>
-		<hr />
-		<span class="c">.lowercase</span>
-		<p class="remove-top lowercase">This is lowercase text.</p>
-		<span class="c">.uppercase</span>
-		<p class="remove-top uppercase">This is uppercase text.</p>
-		<a href="#" class="underline">.underline link</a>
-		<br />
-		<a href="#" class="nounderline">.nounderline link</a>
-	<h2>Floats</h2>
-		<img src="http://placehold.it/350x150/EEE/CCC&text=.floatleft" class="floatleft scale-with-grid"/>
-		<img src="http://placehold.it/350x150/EEE/CCC&text=.floatright" class="floatright scale-with-grid"/>
-		<div class="clear"></div>
+      <p>You can check it out for the time being from <a href="https://github.com/simplethemes/smpl.git">https://github.com/simplethemes/smpl.git</a>. I will be moving it to github shortly.</p>
 
-		<h2>Misc. Styles</h2>
+      <p>To use, you'll need to have <a href="http://nodejs.org/">node.js</a>, <a href="http://gruntjs.com/getting-started">grunt</a> and <a href="http://sass-lang.com/">SASS</a> with <a href="http://compass-style.org/">Compass</a>. Once you download, cd into the directory and run <span class="c">npm install</span>. Run <strong>grunt-dev.command</strong> and you should be good to go. This workflow works best with Google Chrome with the <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en">LiveReload</a> extension enabled.</p>
 
-		<div class="one_half">
-		<p class="remove-top">Add margin to an element.</p>
-			<ul class="none">
-				<li>.margin5</li>
-				<li>.margin10</li>
-				<li>.margin20</li>
-				<li>.margin30</li>
-				<li>.margin40</li>
-			</ul>
-			<p class="remove-bottom">Add vertical margin to an element.</p>
-			<ul class="none">
-				<li>.marginv5</li>
-				<li>.marginv10</li>
-				<li>.marginv20</li>
-				<li>.marginv30</li>
-				<li>.marginv40</li>
-			</ul>
-		</div>
-		<div class="one_half last">
-			<p class="remove-top">Add padding to an element.</p>
-			<ul class="none">
-				<li>.pad5</li>
-				<li>.pad10</li>
-				<li>.pad20</li>
-				<li>.pad30</li>
-				<li>.pad40</li>
-			</ul>
-			<p class="remove-bottom">Add vertical padding to an element.</p>
-			<ul class="none">
-				<li>.padv5</li>
-				<li>.padv10</li>
-				<li>.padv20</li>
-				<li>.padv30</li>
-				<li>.padv40</li>
-			</ul>
-		</div>
-		<div class="clear"></div>
-		<p class="remove-bottom">As shown above, <span class="c">ul.none</span> or <span class="c">ol.none</span> Remove list styles from a UL or OL.</p>
-		<p><span class="smalltext">This is small text</span> <span class="c">.smalltext</span></p>
-		<p class="alignleft"><span class="c">.alignleft</span> aligns text left. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-		<p class="alignright"><span class="c">.alignright</span> aligns text right. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-		<p class="aligncenter"><span class="c">.aligncenter</span>  aligns text center. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-	</div>
+      <ul class="none">
+        <li><a href="#columns">Columns</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#floats">Floats</a></li>
+        <li><a href="#misc">Misc Helpers</a></li>
+        <li><a href="#forms">Forms</a></li>
+      </ul>
 
-	</div> <!-- /container -->
+      <span class="bold">Includes:</span>
+      <ul>
+        <li>Flexible <a rel="external" href="http://getskeleton.com/" title="Skeleton">skeleton</a> grid system mixin</li>
+        <li>Human readable css helpers</li>
+        <li>Quick deployment based on <a href="http://getfireshell.com/" rel="external">fireshell</a></li>
+      </ul>
+      <h2 id="columns">Columns</h2>
+      <p>In addition to the <span class="c"><code>.one.column</code></span> through <span class="c"><code>.sixteen.columns</code></span> classes included with <a href="http://getskeleton.com/" rel="external">Skeleton</a>, there are several nestable responsive fractional columns:</p>
+      <ul>
+        <li>.one_half</li>
+        <li>.one_third</li>
+        <li>.two_thirds</li>
+        <li>.three_fourths</li>
+        <li>.one_fourth</li>
+        <li>.one_fifth</li>
+        <li>.two_fifth</li>
+        <li>.three_fifth</li>
+        <li>.four_fifth</li>
+        <li>.one_sixth</li>
+        <li>.five_sixth</li>
+      </ul>
+    <div class="dim rnd aligncenter one_half padv10">.one_half</div>
+    <div class="dim rnd aligncenter one_half last padv10">.one_half.last</div>
+    <div class="clearfix"></div>
+    <div class="dim rnd aligncenter one_third padv10">.one_third</div>
+    <div class="dim rnd aligncenter one_third padv10">.one_third</div>
+    <div class="dim rnd aligncenter one_third padv10 last">.one_third.last</div>
+    <div class="clearfix"></div>
+    <div class="dim rnd aligncenter one_third padv10">.one_third</div>
+    <div class="dim rnd aligncenter two_thirds padv10 last">.two_thirds.last</div>
+    <div class="clearfix"></div>
+    <div class="dim rnd aligncenter three_fourths padv10">.three_fourths</div>
+    <div class="dim rnd aligncenter one_fourth padv10 last">.one_fourth.last</div>
+    <div class="clearfix"></div>
+    <div class="dim rnd aligncenter one_fourth padv10">.one_fourth</div>
+    <div class="dim rnd aligncenter one_fourth padv10">.one_fourth</div>
+    <div class="dim rnd aligncenter one_fourth padv10">.one_fourth</div>
+    <div class="dim rnd aligncenter one_fourth padv10 last">.one_fourth.last</div>
+    <div class="clearfix"></div>
+    <div class="dim rnd aligncenter two_fifth padv10">.two_fifth</div>
+    <div class="dim rnd aligncenter three_fifth padv10 last">.three_fifth.last</div>
+    <div class="clearfix"></div>
+    <div class="dim rnd aligncenter one_fifth padv10">.one_fifth</div>
+    <div class="dim rnd aligncenter four_fifth padv10 last">.four_fifth.last</div>
+    <div class="clearfix"></div>
+    <div class="dim rnd aligncenter one_sixth padv10">.one_sixth</div>
+    <div class="dim rnd aligncenter five_sixth padv10 last">.five_sixth.last</div>
+    <div class="clearfix"></div>
+      <h2 id="buttons">Buttons</h2>
+      <a class="tiny button" href="#">.tiny.button</a>
+      <a class="small button" href="#">.small.button</a>
+      <a class="button" href="#">.button</a>
+      <a class="big red button" href="#">.big.button</a>
+      <a class="huge black button" href="#">.huge.button</a>
+      <span class="bold clearfix">Available Default Colors</span>
+      <a class="green button" href="#">.green.button</a>
+      <a class="red button" href="#">.red.button</a>
+      <a class="blue button" href="#">.blue.button</a>
+      <a class="gray button" href="#">.gray.button</a>
+      <a class="black button" href="#">.black.button</a>
+      <span class="bold clearfix">You can also use captions:</span>
+      <a class="button" href="#">.button <span class="caption">span.caption</span></a>
+
+    <h2 id="images">Images</h2>
+    <p>Force images to fit full container width: <span class="c">img.scale-with-grid</span></p>
+    <img src="http://placehold.it/350x150/EEE/CCC&text=placeholder" class="scale-with-grid"/>
+    <p>Add a border accent to an image: <span class="c">img.feature</span></p>
+    <img src="http://placehold.it/350x150/EEE/CCC&text=placeholder" class="scale-with-grid feature"/>
+    <p>Add a rounded corner (to any element): <span class="c">img.rnd</span></p>
+    <img src="http://placehold.it/350x150/EEE/CCC&text=placeholder" class="scale-with-grid rnd"/>
+    <h2 id="typography">Typography Helpers</h2>
+    <h4 class="bordered">H.bordered</h4>
+    <div class="one_half">
+      <h4 class="light">H.light</h4>
+      <h4 class="lighter">H.lighter</h4>
+      <h4 class="bold">H.bold</h4>
+      <h4 class="bolder">H.bolder</h4>
+    </div>
+    <div class="one_half last">
+      <span class="bdr marginv10"><h4 class="remove-top">H.remove-top</h4></span>
+      <span class="bdr marginv10"><h4 class="remove-bottom">H.remove-bottom</h4></span>
+      <span class="bdr marginv10"><h4 class="remove-top-bottom">H.remove-top-bottom</h4></span>
+      <span class="subheading">
+        <p>Wrap a set of headings in a <span class="c">.subheading</span> container to butt up two headings. You could also use the <span class="c">.remove-top-bottom</span> class on each heading as an alternative.</p>
+        <h2>Heading</h2>
+        <h3 class="lighter">with subheading</h3>
+      </span>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+    <span class="c">.lowercase</span>
+    <p class="remove-top lowercase">This is lowercase text.</p>
+    <span class="c">.uppercase</span>
+    <p class="remove-top uppercase">This is uppercase text.</p>
+    <a href="#" class="underline">.underline link</a>
+    <br />
+    <a href="#" class="nounderline">.nounderline link</a>
+  <h2 id="floats">Floats</h2>
+    <img src="http://placehold.it/350x150/EEE/CCC&text=.floatleft" class="floatleft scale-with-grid"/>
+    <img src="http://placehold.it/350x150/EEE/CCC&text=.floatright" class="floatright scale-with-grid"/>
+    <div class="clear"></div>
+
+    <h2 id="misc">Misc. Styles</h2>
+
+    <div class="one_half">
+    <p class="remove-top">Add margin to an element.</p>
+      <ul class="none">
+        <li>.margin5</li>
+        <li>.margin10</li>
+        <li>.margin20</li>
+        <li>.margin30</li>
+        <li>.margin40</li>
+      </ul>
+      <p class="remove-bottom">Add vertical margin to an element.</p>
+      <ul class="none">
+        <li>.marginv5</li>
+        <li>.marginv10</li>
+        <li>.marginv20</li>
+        <li>.marginv30</li>
+        <li>.marginv40</li>
+      </ul>
+    </div>
+    <div class="one_half last">
+      <p class="remove-top">Add padding to an element.</p>
+      <ul class="none">
+        <li>.pad5</li>
+        <li>.pad10</li>
+        <li>.pad20</li>
+        <li>.pad30</li>
+        <li>.pad40</li>
+      </ul>
+      <p class="remove-bottom">Add vertical padding to an element.</p>
+      <ul class="none">
+        <li>.padv5</li>
+        <li>.padv10</li>
+        <li>.padv20</li>
+        <li>.padv30</li>
+        <li>.padv40</li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <p class="remove-bottom">As shown above, <span class="c">ul.none</span> or <span class="c">ol.none</span> Remove list styles from a UL or OL.</p>
+    <p><span class="smalltext">This is small text</span> <span class="c">.smalltext</span></p>
+    <p class="alignleft"><span class="c">.alignleft</span> aligns text left. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <p class="alignright"><span class="c">.alignright</span> aligns text right. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <p class="aligncenter"><span class="c">.aligncenter</span>  aligns text center. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <h2 id="forms">Forms</h2>
+
+  <form action="#" method="post" enctype="multipart/form-data" onsubmit="return false">
+    <p>
+      <input type="checkbox" id="test_checkbox_1" name="test_checkbox_1" />
+      <label for="test_checkbox_1">
+        Test checkbox 1
+      </label>
+      &nbsp;
+      &nbsp;
+      <input type="checkbox" id="test_checkbox_2" name="test_checkbox_2" />
+      <label for="test_checkbox_2">
+        Test checkbox 2
+      </label>
+      &nbsp;
+      &nbsp;
+      <input type="checkbox" id="test_checkbox_3" name="test_checkbox_3" />
+      <label for="test_checkbox_3">
+        Test checkbox 3
+      </label>
+    </p>
+    <p>
+      <input type="radio" id="test_radio_1" name="test_radio_group" />
+      <label for="test_radio_1">
+        Test radio 1
+      </label>
+      &nbsp;
+      &nbsp;
+      <input type="radio" id="test_radio_2" name="test_radio_group" />
+      <label for="test_radio_2">
+        Test radio 2
+      </label>
+      &nbsp;
+      &nbsp;
+      <input type="radio" id="test_radio_3" name="test_radio_group" />
+      <label for="test_radio_3">
+        Test radio 3
+      </label>
+    </p>
+    <p>
+      <label for="select_dd">
+        Select drop-down
+      </label>
+      <br />
+      <select id="select_dd" name="select_dd">
+        <optgroup label="Group 1">
+          <option value="1">Some text goes here</option>
+          <option value="2">Another choice could be here</option>
+          <option value="3">Yet another item to be chosen</option>
+        </optgroup>
+        <optgroup label="Group 2">
+          <option value="4">Some text goes here</option>
+          <option value="5">Another choice could be here</option>
+          <option value="6">Yet another item to be chosen</option>
+        </optgroup>
+        <optgroup label="Group 3">
+          <option value="7">Some text goes here</option>
+          <option value="8">Another choice could be here</option>
+          <option value="9">Yet another item to be chosen</option>
+        </optgroup>
+      </select>
+      <input type="text" id="text_inline" name="text_inline"/>
+      <input type="button" value="Input Button" class="small button" />
+      <button class="small">Button Tag</button>
+      <a href="#" class="small button">Link Button</a>
+    </p>
+    <p>
+      <label for="select_multi">
+        Select multiple
+      </label>
+      <br />
+      <select id="select_multi" name="select_multi" multiple="multiple" size="10">
+        <optgroup label="Group 1">
+          <option value="1">Some text goes here</option>
+          <option value="2">Another choice could be here</option>
+          <option value="3">Yet another item to be chosen</option>
+        </optgroup>
+        <optgroup label="Group 2">
+          <option value="4">Some text goes here</option>
+          <option value="5">Another choice could be here</option>
+          <option value="6">Yet another item to be chosen</option>
+        </optgroup>
+        <optgroup label="Group 3">
+          <option value="7">Some text goes here</option>
+          <option value="8">Another choice could be here</option>
+          <option value="9">Yet another item to be chosen</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>
+      <label for="textarea">
+        Textarea
+      </label>
+      <br />
+      <textarea id="textarea" name="textarea" rows="5" placeholder="This is an example of HTML5 placeholder text."></textarea>
+    </p>
+    <table width="100%">
+      <tr>
+        <td>
+          <label for="url">
+            URL
+          </label>
+          <br />
+          <input type="url" id="url" name="url" value="http://"/>
+        </td>
+        <td>
+          <label for="email">
+            Email
+          </label>
+          <br />
+          <input type="email" id="email" name="email" placeholder="name@example.com" />
+        </td>
+        <td>
+          <label for="password">
+            Password
+          </label>
+          <br />
+          <input type="password" id="password" name="password" placeholder="Alphanumeric123!" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="datetime-local">
+            Datetime local
+          </label>
+          <br />
+          <input type="datetime-local" id="datetime-local" name="datetime-local" />
+        </td>
+        <td>
+          <label for="number">
+            Number
+          </label>
+          <br />
+          <input type="number" id="number" name="number" min="0" max="999" step="1" />
+        </td>
+        <td>
+          <label for="tel">
+            Tel (phone)
+          </label>
+          <br />
+          <input type="tel" id="tel" name="tel" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="datetime">
+            Datetime
+          </label>
+          <br />
+          <input type="datetime" id="datetime" name="datetime" />
+        </td>
+        <td>
+          <label for="date">
+            Date
+          </label>
+          <br />
+          <input type="date" id="date" name="date" />
+        </td>
+        <td>
+          <label for="month">
+            Month
+          </label>
+          <br />
+          <input type="month" id="month" name="month" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="search">
+            Search
+          </label>
+          <br />
+          <input type="search" id="search" name="search" />
+        </td>
+        <td>
+          <label for="range">
+            Range
+          </label>
+          <br />
+          <input type="range" id="range" name="range" />
+        </td>
+        <td>
+          <label for="file">
+            File upload
+          </label>
+          <br />
+          <input type="file" id="file" name="file" />
+        </td>
+      </tr>
+    </table>
+    <p>
+      <input type="submit" value="Input - Submit" />
+      &nbsp;
+      <input type="button" value="Input - Button" />
+      &nbsp;
+      <input type="reset" value="Input - Reset" />
+      &nbsp;
+      <button>Button tag</button>
+    </p>
+  </form>
+
+
+  </div>
+
+  </div> <!-- /container -->
 </body>
 </html>
