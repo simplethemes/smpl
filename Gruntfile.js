@@ -163,8 +163,8 @@ module.exports = function (grunt) {
           sassDir: '<%= project.src %>/sass',
           cssDir: '<%= project.app %>/css',
           specify: ['<%= project.css %>'],
-          banner: '<%= tag.banner %>',
-          require: 'companimation'
+          banner: '<%= tag.banner %>'
+          //require: 'companimation'
       },
       dev: {
         options: {
