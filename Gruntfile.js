@@ -1,7 +1,7 @@
 /*!
- * FireShell Gruntfile
- * http://getfireshell.com
- * @author Todd Motto
+ * Smpl Frontend Starter Framework
+ * https://www.simplethemes.com
+ * @author Casey Lee
  */
 
 'use strict';
@@ -48,9 +48,6 @@ module.exports = function (grunt) {
       ]
     },
 
-
-
-
     /**
      * Project banner
      * Dynamically appended to CSS/JS files
@@ -69,14 +66,13 @@ module.exports = function (grunt) {
     },
 
 
-
-
     /**
      * Connect port/livereload
      * https://github.com/gruntjs/grunt-contrib-connect
      * Starts a local webserver and injects
      * livereload snippet
      */
+
     connect: {
       options: {
         port: 9000,
@@ -92,8 +88,6 @@ module.exports = function (grunt) {
     },
 
 
-
-
     /**
      * JSHint
      * https://github.com/gruntjs/grunt-contrib-jshint
@@ -106,8 +100,6 @@ module.exports = function (grunt) {
         force: true
       }
     },
-
-
 
 
 
@@ -130,8 +122,6 @@ module.exports = function (grunt) {
     },
 
 
-
-
     /**
      * Uglify (minify) JavaScript files
      * https://github.com/gruntjs/grunt-contrib-uglify
@@ -150,8 +140,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
-
 
     /**
      * Compile Sass/SCSS files
@@ -177,8 +165,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
-
 
 
     /**
@@ -221,7 +207,6 @@ module.exports = function (grunt) {
       }
     }
   });
-
 
   /*
   -----------------
