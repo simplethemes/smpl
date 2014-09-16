@@ -1,0 +1,33 @@
+@-webkit-keyframes fadeInfast {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeInfast {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-ms-keyframes fadeInfast {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-o-keyframes fadeInfast {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes fadeInfast {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@mixin fadeInfast($duration, $delay, $function, $fill, $visibility) {
+	@include animation-name(fadeInfast);
+  	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

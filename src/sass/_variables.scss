@@ -37,11 +37,11 @@ $h4-font-size: 1    * $base-font-size !default;
 $h5-font-size: 0.83 * $base-font-size !default;
 $h6-font-size: 0.67 * $base-font-size !default;
 
-$font-normal:	400 !default;
-$font-light:	300 !default;
-$font-lighter:	300 !default;
-$font-bold:		600 !default;
-$font-bolder:	800 !default;
+$font-weight-normal:	400 !default;
+$font-weight-light:	    300 !default;
+$font-weight-lighter:	300 !default;
+$font-weight-bold:		600 !default;
+$font-weight-bolder:	800 !default;
 
 
 // Set this to true to force CSS output to exactly match normalize.css.
@@ -50,10 +50,5 @@ $strict-normalize: true !default;
 // The amount lists and blockquotes are indented.
 $indent-amount: 40px !default;
 
-// Set this to true to add support for IE 6.
-$legacy-support-for-ie6: false !default; // Override default set in Compass' Support partial.
-
-// Set this to true to add support for IE 7.
-$legacy-support-for-ie7: false !default; // Override default set in Compass' Support partial.
-
+// PIE
 $pie-behavior: url("../css/PIE.php");

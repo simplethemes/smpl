@@ -1,0 +1,97 @@
+
+// Params: bgcolor, textcolor, bghovercolor, hovercolor
+
+button,
+a.button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+    @include button($brand,#fff,$brand,#fff);
+    &.small {
+        font-size:14px;
+        padding: 4px 8px;
+    }
+}
+
+button.green,
+a.button.green,
+input[type="reset"].green,
+input[type="submit"].green,
+input[type="button"].green {
+    @include button(#6BBC4F,#fff,#6BBC4F,#fff);
+    &.small {
+        font-size:14px;
+        padding: 4px 8px;
+    }
+}
+
+button.red,
+a.button.red,
+input[type="reset"].red,
+input[type="submit"].red,
+input[type="button"].red {
+    @include button(#C60A15,#fff,#C60A15,#fff);
+    &.small {
+        font-size:14px;
+        padding: 4px 8px;
+    }
+}
+
+
+button.gray,
+a.button.gray,
+input[type="reset"].gray,
+input[type="submit"].gray,
+input[type="button"].gray {
+    @include button(#ccc,#000,#eee,#000);
+    &.small {
+        font-size:14px;
+        padding: 4px 8px;
+    }
+}
+
+button.black,
+a.button.black,
+input[type="reset"].black,
+input[type="submit"].black,
+input[type="button"].black {
+    @include button(#111,#fff,#111,#fff);
+    &.small {
+        font-size:14px;
+        padding: 4px 8px;
+    }
+}
+
+button.lr,
+a.button.lr,
+input[type="reset"].lr,
+input[type="submit"].lr,
+input[type="button"].lr {
+    @include border-radius(4px 0 0 4px);
+}
+button.rr,
+a.button.rr,
+input[type="reset"].rr,
+input[type="submit"].rr,
+input[type="button"].rr {
+    @include border-radius(0 4px 4px 0);
+}
+
+
+.btn.tiny {
+    font-size: .75em;
+    padding: .5em 1em !important;
+}
+.btn.small {
+    font-size: .85em;
+    padding: .5em 1em !important;
+}
+.btn.large,.btn.big {
+    font-size: 1.25em;
+    padding: .75em 1.5em !important;
+}
+.btn.huge {
+    font-size: 1.5em;
+    padding: .75em 1.75em !important;
+    font-weight: $font-weight-bold;
+}

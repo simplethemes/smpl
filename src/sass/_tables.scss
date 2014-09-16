@@ -1,0 +1,52 @@
+table {
+  margin: .5em 0 1em;
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid hsl(0, 0%, 90%);
+}
+
+
+table th {
+  text-align: left;
+  padding: .4em .8em;
+  font-weight: bold;
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(0, 0%, 20%);
+}
+
+table th,
+table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  &.center {
+    text-align: center;
+  }
+}
+
+table td {
+  @include padding-leader(1);
+  @include padding-trailer(1);
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+table th {
+  font-weight: bold;
+}
+
+table thead th {
+  vertical-align: bottom;
+}
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+

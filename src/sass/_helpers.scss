@@ -1,44 +1,134 @@
-/* Helpers */
-.remove-bottom {margin-bottom: 0 !important;padding-bottom: 0 !important;}
-.remove-top {margin-top: 0 !important;padding-top: 0 !important;}
-.nomargin,.remove-top-bottom {margin-top: 0 !important;margin-bottom: 0 !important;}
-
-.pull-right,.floatright,.float-right {float:right;}
-.pull-left,.floatleft,.float-left {float:left;}
-
-img.pull-left {margin: 0px 10px 0px 0px;}
-img.pull-right {margin: 0px 0px 0px 10px;}
-
-.alignleft {text-align: left !important;}
-.alignright {text-align: right !important;}
-.aligncenter {text-align: center !important;}
-.blockcenter {margin:0 auto;width: 100%;text-align: center;display: inline-block;}
-
-ul.none, ul.none li,
-ol.none, ol.none li {
-  margin-left: 0;
-  padding-left: 0;
-  list-style: none;
+// Floats
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
 }
 
-.smalltext {font-size: 12px;color:hsl(0, 0%, 50%)}
-
-
-@media only screen and (max-width: 767px) {
-.pull-right,.floatright,.float-right,.pull-left,.floatleft,.float-left,img.pull-left,img.pull-right {float:none;margin: 0 auto 10px auto;}
+img.pull-left,img.alignleft {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+img.pull-right,img.alignright {
+    float: right;
+    margin: 0 0 1em 1em;
 }
 
-.caps,.uppercase {text-transform: uppercase;}
-.lowercase {text-transform: lowercase;}
+.center {
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
 
-.light {font-weight: $font-light !important;}
-.lighter {font-weight: $font-lighter !important;}
-.bold {font-weight: $font-bold !important;}
-.bolder {font-weight: $font-bolder !important;}
+.dim {
+    background-color: $accent;
+}
 
-.tighten {letter-spacing: -1px;}
-.loosen {letter-spacing: 2px;}
-.equal {line-height: 100% !important;}
+// Text Alignment Classes
+
+.text-right,.alignright {
+    text-align: right !important;
+}
+.text-left,.alignleft {
+    text-align: left !important;
+}
+.text-center,.aligncenter {
+    text-align: center !important;
+}
+
+// Text Styles
+
+.text-normal {
+    font-style: normal !important;
+}
+.text-italic {
+    font-style: italic !important;
+}
+
+// Weights
+
+.text-light {
+    font-weight: lighter !important;
+    font-weight: $font-weight-light !important;
+}
+.text-lighter {
+    font-weight: lighter !important;
+    font-weight: $font-weight-lighter !important;
+}
+
+.text-bold {
+    font-weight: bold !important;
+    font-weight: $font-weight-bold !important;
+}
+.text-bolder {
+    font-weight: bold !important;
+    font-weight: $font-weight-bolder !important;
+}
+.text-bold-italic {
+    font-weight: $font-weight-normal !important;
+    font-style: italic !important;
+}
+
+span.small,.smalltext {
+    @include adjust-font-size-to(13px,4);
+}
+
+.caps,.uppercase {
+    text-transform: uppercase !important;
+}
+
+.lowercase {
+    text-transform: lowercase !important;
+}
+
+.remove-top {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.remove-bottom {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+// White-Space
+
+.squeeze {
+    padding: 0 4em;
+}
+
+.squeezemore {
+    padding: 0 6em;
+}
+
+//  Resonsive images
+
+.scale-with-grid {
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+// Styled Images
+
+img.feature {
+  @include box-shadow(0px 0px 8px hsl(0, 0%, 80%));
+  border: 8px solid #fff;
+}
+
+img.bdr {
+    background-color: #fff;
+    border: 1px solid darken($accent,10%);
+    padding: 4px;
+}
+
+img.rnd {
+    @include border-radius(4px);
+}
+
+
+// Arbitrary Margins
 
 .margin5 {margin:5px !important;}
 .margin10 {margin:10px !important;}
@@ -68,56 +158,60 @@ ol.none, ol.none li {
   .padv5,.padv10,.padv20,.padv30,.padv40 {padding:10px 0px !important;}
 }
 
+// Lists
 
-img.scale-with-grid {max-width: 100%;height: auto;}
-
-img.feature {
-  @include box-shadow(0px 0px 8px hsl(0, 0%, 80%));
-  border: 8px solid #fff;
-}
-.bdr {
-  border: 1px solid darken($accent,10%);
-  display: block;
-}
-
-.rnd {@include border-radius(4px);}
-
-a.underline {text-decoration: underline !important;}
-a.nounderline {text-decoration: none !important;}
-
-h1.bordered,h2.bordered,h3.bordered,h4.bordered,h5.bordered {
-  border-bottom: 1px solid #eee;
-  width: 100%;
+ul.square {
+    list-style: square;
+    margin-left: 0px;
+    padding-left: 20px;
+    line-height: 125%;
+    li {
+        padding: 0 0 10px 0;
+    }
 }
 
-.dim {background-color: $accent !important;}
-
-a.blacklink {
-  color: #000 !important;
-  &:hover {
-    color: $brand-alt !important;
-  }
+ul.none, ul.none li, ol.none, ol.none li {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
 }
-a.hoverblack {
-  color: inherit;
-  &:hover {
-    color: #000 !important;
-  }
+
+
+/* @group Columns */
+
+.one_half {
+    width:48%
 }
-/* Quick Columns */
-
-.one_half { width: 48%; }
-.one_third { width: 30.66%; }
-.two_thirds { width: 65.33%; }
-.one_fourth { width: 22%; }
-.three_fourths { width: 74%; }
-.one_fifth { width: 16.8%; }
-.two_fifth { width: 37.6%; }
-.three_fifth { width: 58.4%; }
-.four_fifth { width: 79.2%; }
-.one_sixth { width: 13.33%; }
-.five_sixth { width: 82.67%; }
-
+.one_third {
+    width:30.66%
+}
+.two_thirds {
+    width:65.33%
+}
+.one_fourth {
+    width:22%
+}
+.three_fourths {
+    width:74%
+}
+.one_fifth {
+    width:16.8%
+}
+.two_fifth {
+    width:37.6%
+}
+.three_fifth {
+    width:58.4%
+}
+.four_fifth {
+    width:79.2%
+}
+.one_sixth {
+    width:13.33%
+}
+.five_sixth {
+    width:82.67%
+}
 .one_half,
 .one_third,
 .two_thirds,
@@ -129,25 +223,24 @@ a.hoverblack {
 .four_fifth,
 .one_sixth,
 .five_sixth {
-	position: relative;
-	margin-right: 4%;
-	margin-bottom: 20px;
-	float: left;
+    position:relative;
+    margin-right:4%;
+    margin-bottom:10px;
+    float:left
+}
+.last {
+    margin-right:0 !important
+}
+.clear {
+    clear:both;
+    display:block;
+    overflow:hidden;
+    visibility:hidden;
+    width:0;height:0
 }
 
-.last {margin-right:0 !important;}
-
 @media only screen and (max-width: 767px) {
-  .one_half,
-  .one_third,
-  .two_thirds,
-  .three_fourths,
-  .one_fourth,
-  .one_fifth,
-  .two_fifth,
-  .three_fifth,
-  .four_fifth,
-  .one_sixth,
-  .five_sixth {width: 100% !important;}
-  input[type="reset"],input[type="submit"],input[type="button"],a.button,a.button.rr,a.button.lr,.button,button {width: 100% !important; @include border-radius(4px);}
+    .one_half,.one_third,.two_thirds,.three_fourths,.one_fourth,.one_fifth,.two_fifth,.three_fifth,.four_fifth,.one_sixth,.five_sixth {
+        width:100% !important;
+    }
 }

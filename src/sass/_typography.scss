@@ -19,34 +19,34 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
     color: $h1-color;
-    font-weight: $font-bolder;
+    font-weight: $font-weight-bolder;
     letter-spacing: -1px;
 }
 
 h2 {
     color: $h2-color;
-    font-weight: $font-bold;
+    font-weight: $font-weight-bold;
     letter-spacing: -1px;
 }
 
 h3 {
     color: $h3-color;
-    font-weight: $font-bold;
+    font-weight: $font-weight-bold;
 }
 
 h4 {
     color: $h4-color;
-    font-weight: $font-normal;
+    font-weight: $font-weight-normal;
 }
 
 h5 {
     color: $h5-color;
-    font-weight: $font-light;
+    font-weight: $font-weight-light;
 }
 
 h6 {
     color: $h6-color;
-    font-weight: $font-lighter;
+    font-weight: $font-weight-lighter;
 }
 
 .emphasis {
@@ -58,11 +58,16 @@ h6 {
     -webkit-font-smoothing: antialiased;
 }
 
-.subheading,.subheading h1,.subheading h2,.subheading h3,.subheading h4 {
+.subheading {
+    margin-bottom: 20px;
+}
+
+.subheading h1,.subheading h2,.subheading h3,.subheading h4 {
     margin: 0px !important;
     padding: 0px !important;
     line-height: 100%;
 }
+
 
 blockquote {
     $blockquote-color: hsl(0, 0%, 93%);
